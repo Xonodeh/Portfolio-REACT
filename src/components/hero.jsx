@@ -14,7 +14,7 @@ export default function Hero() {
       </h1>
 
       <h2 className="text-lg md:text-xl max-w-xl mb-4 text-gray-700">
-        Développeur web & logiciel passionné par la cybersécurité 😄
+        Développeur web & logiciel passionné par la cybersécurité. 😄
       </h2>
 
       <p className="text-gray-600 max-w-xl mb-6">
@@ -52,7 +52,6 @@ export default function Hero() {
           Voir mes projets 
 </a>
 
-        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <a
           href="../img/CV-ISEN.pdf"
           download
@@ -60,7 +59,6 @@ export default function Hero() {
         >
           Télécharger mon CV
         </a>
-        </button>
       </div>
     </section>
   );

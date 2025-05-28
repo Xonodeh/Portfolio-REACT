@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 export default function Projects() {
   const projects = [
@@ -45,46 +45,57 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleProjectClick = (project) => {
-    console.log("Clic sur :", project.title);
     setSelectedProject(project);
   };
 
   return (
-    <section id="projects" className="container">
-      <h2 className="text-4xl font-semibold mb-12 text-center text-gray-900">Mes Projets</h2>
+    <section id="projects" className="py-16 bg-white text-center">
+      <h2 className="text-4xl font-semibold mb-12 text-gray-900">Mes Projets</h2>
 
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        modules={[Navigation, Pagination]}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-      >
-        {projects.map(({ id, title, description, images, link }) => (
-          <SwiperSlide key={id}>
-            <div
-              onClick={() => handleProjectClick({ id, title, description, images, link })}
-              className="cursor-pointer rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 p-6 h-full flex flex-col justify-between"
-            >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
-              <p className="text-gray-700">{description}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="flex justify-center">
+        <div className="w-full max-w-6xl px-4">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={false}
+            pagination={{ clickable: true }}
+            modules={[Navigation, Pagination, Autoplay]}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={3000}
+            loop={true}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {projects.map(({ id, title, description, images, link }) => (
+              <SwiperSlide key={id} className="overflow-visible">
+                <div
+                  onClick={() => handleProjectClick({ id, title, description, images, link })}
+                  className="cursor-pointer relative z-10 rounded-3xl bg-white p-6 min-h-[240px] shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between"
+                >
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
+                  <p className="text-gray-700">{description}</p>
+                </div>
+              </SwiperSlide>
 
-      {/* Modale simplifiée */}
+            ))}
+          </Swiper>
+        </div>
+      </div>
+
+      {/* Modale projet */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
           <div className="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl custom-button"
+              className="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl"
               aria-label="Fermer la modale"
             >
               &times;
@@ -92,7 +103,6 @@ export default function Projects() {
             <h3 className="text-2xl font-bold mb-4 text-gray-900">{selectedProject.title}</h3>
             <p className="text-gray-700 mb-6">{selectedProject.description}</p>
 
-            {/* Affiche toutes les images */}
             {selectedProject.images?.map((img, i) => (
               <img
                 key={i}
