@@ -44,7 +44,7 @@ export default function Hero() {
       </div>
 
       {/* Boutons stylés Apple */}
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex">
       <a
           href="#projects"
           className="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -55,7 +55,7 @@ export default function Hero() {
         <a
           href="../img/CV-ISEN.pdf"
           download
-          className="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+          className="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Télécharger mon CV
         </a>
