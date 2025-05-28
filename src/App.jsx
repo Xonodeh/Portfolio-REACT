@@ -10,7 +10,7 @@ export default function App() {
     <div className="font-apple bg-white text-gray-900 min-h-screen">
 
       <Header />
-      <main>
+      <main >
         <Hero />
         <Projects />
         <About />

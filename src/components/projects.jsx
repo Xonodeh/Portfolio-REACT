@@ -11,14 +11,14 @@ export default function Projects() {
     {
       id: 1,
       title: "MarieTeam - Site de réservation",
-      description: "Site vitrine avec réservation maritime",
+      description: "Projet de cours de réservation de trajets maritimes",
       images: ["/images/marieteam-site.png", "/images/marieteam-site-2.png"],
       techs: ["html", "css", "php", "js", "mysql"]
     },
     {
       id: 2,
       title: "MarieTeam - App Bureautique",
-      description: "App C# pour gérer les bateaux",
+      description: "App. C# pour les gestionnaires, afin de gérer les bateaux, et générer des brochures en PDF",
       images: ["/images/marieteam-admin.png"],
       techs: ["csharp", "mysql"]
     },
@@ -63,7 +63,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 bg-white text-center">
-      <h2 className="text-4xl font-semibold mb-12 text-gray-900">Mes projets</h2>
+      <h2 className="text-4xl font-semibold mb-12 text-gray-900">🖥️ Mes projets</h2>
 
       <div className="flex justify-center">
         <div className="w-full max-w-6xl px-4">
