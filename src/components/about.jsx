@@ -7,14 +7,14 @@ export default function About() {
       title: "BTS SIO - SLAM",
       school: "Lycée Gaston Berger, Lille",
       description:
-        "Développement web, applications, base de données, cybersécurité. Projets en PHP, C# (Programmation orientée objet).",
+        "Développement web, applications, base de données, API REST, cybersécurité, projets en PHP, C# (Programmation orientée objet).",
     },
     {
-      year: "2023",
+      year: "2025-2028",
       title: "Cycle Ingénieur Numérique (alternance)",
-      school: "Junia ISEN (admis, attente d'une alternance)",
+      school: "Junia ISEN, Lille (admis, attente d'une alternance)",
       description:
-        "Approfondissement du développement logiciel et de la cybersécurité dans un cadre professionnalisant.",
+        "Cycle d'ingénieur du numérique, approfondissement du développement logiciel et de la cybersécurité dans un cadre professionnalisant.",
     },
   ];
 
