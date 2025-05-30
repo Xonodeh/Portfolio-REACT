@@ -15,8 +15,8 @@ export default function Header() {
       </div>
         
         <ul className="flex space-x-6 text-gray-700">
-          <li><a href="#projects" className="hover:text-black transition">Projets</a></li>
           <li><a href="#about" className="hover:text-black transition">À propos</a></li>
+          <li><a href="#projects" className="hover:text-black transition">Projets</a></li>
           <li><a href="#contact" className="hover:text-black transition">Contact</a></li>
         </ul>
       </nav>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -30,21 +31,21 @@ export default function About() {
         "Cycle d'ingénieur du numérique, approfondissement du développement logiciel et de la cybersécurité dans un cadre professionnalisant.",
     },
   ];
- const experiences = [
+  const experiences = [
     {
       year: "2017",
       title: "Stage d'observation",
       company: "SNEF Cuincy",
       description: "Stage d'observation en classe de 3ème, installation d'antennes 4G, commandes de chantiers etc.."
     }, 
+    {
+      year: "2023-2025",
+      title: "Alternant Assistant applicatif & Développeur",
+      company: "CHU de Lille - Direction des ressources numériques",
+      description: "En tant qu'assistant applicatif, j'avais pour mission les recettes de deux applications critiques du CHU, et également la gestion des incidents. Ensuite, sur la partie développeur, j'avais pour mission le développement de deux applications (web & logiciel) à destination de la DRN."
+    } 
+  ];
 
-   {
-    year: "2023-2025",
-    title: "Alternant Assistant applicatif & Développeur",
-    company: "CHU de Lille - Direction des ressources numériques",
-    description: ""
-   } 
- ];
   return (
     <motion.section
       id="about"
@@ -54,8 +55,8 @@ export default function About() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-4xl font-semibold mb-10 text-gray-900">
-      🙋 À propos de moi
+      <h2 className="text-4xl font-semibold mb-10 text-gray-900 ">
+        🙋 À propos de moi
       </h2>
 
       <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-16">
@@ -65,23 +66,42 @@ export default function About() {
 
       <h2 className="text-4xl font-semibold mb-10 text-gray-900">🎓 Mon cursus scolaire</h2>
 
-      <div className="space-y-8 relative border-l border-gray-300 pl-6 text-left">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {cursus.map((step, idx) => (
           <motion.div
             key={idx}
-            className="relative group"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="cursor-pointer bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 p-6 text-left"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
           >
-            <div className="absolute left-[-20px] top-2 w-4 h-4 bg-blue-600 rounded-full group-hover:scale-125 transition-transform"></div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
-              <p className="text-sm text-gray-600 italic mb-1">{step.school}</p>
-              <span className="text-sm text-gray-500">{step.year}</span>
-              <p className="text-gray-700 mt-2">{step.description}</p>
-            </div>
+            <h3 className="text-xl font-bold mb-1 text-gray-900">{step.title}</h3>
+            <p className="text-sm text-gray-600 italic mb-1">{step.school}</p>
+            <span className="text-sm text-gray-500">{step.year}</span>
+            <p className="text-gray-700 mt-3">{step.description}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      <h2 className="text-4xl font-semibold mb-10 text-gray-900 py-12">💼 Expériences professionnelles</h2>
+
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        {experiences.map((exp, idx) => (
+          <motion.div
+            key={idx}
+            className="cursor-pointer bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 p-6 text-left"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <h3 className="text-xl font-bold mb-1 text-gray-900">{exp.title}</h3>
+            <p className="text-sm text-gray-600 italic mb-1">{exp.company}</p>
+            <span className="text-sm text-gray-500">{exp.year}</span>
+            <p className="text-gray-700 mt-3">{exp.description}</p>
           </motion.div>
         ))}
       </div>

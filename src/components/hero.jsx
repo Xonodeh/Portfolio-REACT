@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center h-screen text-center px-6 bg-white">
+    <motion.section
+      className="flex flex-col items-center justify-center h-screen text-center px-6 bg-white"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 2, ease: "easeOut" }}
+    >
       <img
         src="../img/imgProfilApple.jpeg"
         width={150}
@@ -45,12 +52,12 @@ export default function Hero() {
 
       {/* Boutons stylés Apple */}
       <div className="flex">
-      <a
+        <a
           href="#projects"
           className="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Voir mes projets 
-</a>
+        </a>
 
         <a
           href="../img/CV-ISEN.pdf"
@@ -60,6 +67,6 @@ export default function Hero() {
           Télécharger mon CV
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 }
