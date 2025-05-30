@@ -3,6 +3,19 @@ import { motion } from "framer-motion";
 export default function About() {
   const cursus = [
     {
+      year: "2018-2021",
+      title: "Baccalauréat Général - Mathématiques, Physique-Chimie",
+      school: "Lycée Emile Zola, Wattrelos", 
+      description:
+      "Baccalauréat général au lycée Emile Zola à Wattrelos, spécialités Mathématiques, Physique-Chimie option mathématiques expertes."
+    },
+    {
+      year: "2021-2023",
+      title: "Licence MIASHS - Option Sciences Cognitives",
+      school: "Université de Lille",
+      description: "Licence Mathématiques et informatique appliqués aux sciences humaines et sociales, option sciences cognitives. J'ai arrêté cette formation pour un BTS SIO SLAM en alternance, cherchant plus de professionalisation."
+    },
+    {
       year: "2023 - 2025",
       title: "BTS SIO - SLAM",
       school: "Lycée Gaston Berger, Lille",
@@ -17,7 +30,21 @@ export default function About() {
         "Cycle d'ingénieur du numérique, approfondissement du développement logiciel et de la cybersécurité dans un cadre professionnalisant.",
     },
   ];
+ const experiences = [
+    {
+      year: "2017",
+      title: "Stage d'observation",
+      company: "SNEF Cuincy",
+      description: "Stage d'observation en classe de 3ème, installation d'antennes 4G, commandes de chantiers etc.."
+    }, 
 
+   {
+    year: "2023-2025",
+    title: "Alternant Assistant applicatif & Développeur",
+    company: "CHU de Lille - Direction des ressources numériques",
+    description: ""
+   } 
+ ];
   return (
     <motion.section
       id="about"
