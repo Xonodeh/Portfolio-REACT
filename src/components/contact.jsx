@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(false); // 👈 État pour savoir si c’est en cours
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -17,22 +18,30 @@ export default function Contact() {
       return;
     }
 
+    setLoading(true); // 👈 On démarre le "loading"
+
     emailjs.send(
-        "service_x1kckgc",   // ID du service (ex: gmail)
-        "template_6v4jb69",  // ID du template email
-        formData,           // données à envoyer (doivent matcher les champs du template)
-        "UCmN1x2k066yTMKdR"    // clé publique EmailJS
-      )
+      "service_x1kckgc",
+      "template_6v4jb69",
+      formData,
+      "UCmN1x2k066yTMKdR"
+    )
     .then(() => {
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
     })
-    .catch(() => setStatus("error"));
+    .catch(() => {
+      setStatus("error");
+    })
+    .finally(() => {
+      setLoading(false); // 👈 On arrête le "loading"
+    });
   };
 
   return (
     <section id="contact" className="max-w-3xl mx-auto px-6 py-20">
       <h2 className="text-4xl font-semibold mb-8 text-gray-900 text-center">📬 Contactez-moi</h2>
+
       <form onSubmit={handleSubmit} className="flex flex-col gap-6 bg-white p-8 rounded-xl shadow-lg" noValidate>
         <input
           type="text"
@@ -61,12 +70,24 @@ export default function Contact() {
           onChange={handleChange}
           required
         />
+
         <button
           type="submit"
-          className="bg-blue-600 text-white rounded-md py-3 font-semibold hover:bg-blue-700 transition"
+          className={`rounded-md py-3 font-semibold transition text-white ${
+            loading ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
+          }`}
+          disabled={loading}
         >
           Envoyer
         </button>
+
+        {/* 🔽 Affichage du message et du spinner pendant l'envoi */}
+        {loading && (
+          <div className="text-center mt-2">
+            <p className="text-blue-600 font-medium">Envoi en cours...</p>
+            <div className="mt-2 mx-auto w-6 h-6 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
 
         {status === "success" && (
           <p className="text-green-600 font-medium text-center mt-2">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+ import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,14 +12,16 @@ export default function Projects() {
       id: 1,
       title: "MarieTeam - Site de réservation",
       description: "Projet de cours de réservation de trajets maritimes",
-      images: ["/images/marieteam-site.png", "/images/marieteam-site-2.png"],
+      images: ["../img/mariteam-web/inscr.png", "../img/mariteam-web/conn.png", "../img/mariteam-web/accueil1.png", "../img/mariteam-web/accueil2.png", "../img/mariteam-web/traversees.png", "../img/mariteam-web/test.png", "../img/mariteam-web/confirm.png"],
+      link: "https://github.com/Xonodeh/MarieTeam",
       techs: ["html", "css", "php", "js", "mysql"]
     },
     {
       id: 2,
       title: "MarieTeam - App Bureautique",
       description: "App. C# pour les gestionnaires, afin de gérer les bateaux, et générer des brochures en PDF",
-      images: ["/images/marieteam-admin.png"],
+      link: "https://github.com/Xonodeh/BrochuresMarieTeam",
+      images: ["../img/mariteam-csharp/menu.png", "../img/mariteam-csharp/ajoutEquip.png", "../img/mariteam-csharp/pdfgenere.png", "../img/mariteam-csharp/brochure.png"],
       techs: ["csharp", "mysql"]
     },
     {
@@ -34,7 +36,7 @@ export default function Projects() {
       id: 4,
       title: "Planiftâches - Web",
       description: "App de planif. au CHU de Lille",
-      images: ["/images/planiftaches-web.png"],
+      images: ["../img/planiftaches/accueil-planiftaches.png", "../img/planiftaches/ajout_charge-planiftaches.png"],
       techs: ["php", "js", "html", "css", "mysql"]
     },
     {
@@ -47,6 +49,11 @@ export default function Projects() {
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    document.body.style.overflow = selectedProject ? 'hidden' : 'auto';
+    return () => (document.body.style.overflow = 'auto');
+  }, [selectedProject]);
 
   const getIcon = (tech) => {
     const icons = {
@@ -98,7 +105,7 @@ export default function Projects() {
                   <p className="text-gray-700 mb-4">{project.description}</p>
 
                   {/* Icônes technos */}
-                  <div className="flex justify-center gap-3 mt-auto">
+                  <div className="flex justify-center gap-3 mt-auto mb-3">
                     {project.techs?.map((tech, idx) => (
                       <img
                         key={idx}
@@ -109,6 +116,8 @@ export default function Projects() {
                       />
                     ))}
                   </div>
+
+                 
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -126,7 +135,6 @@ export default function Projects() {
             transition={{ duration: 0.2 }}
             className="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl relative overflow-y-auto max-h-[90vh]"
           >
-            {/* Bouton croix stylé */}
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 text-gray-500 hover:text-black text-xl transition"
@@ -140,33 +148,28 @@ export default function Projects() {
             <h3 className="text-2xl font-bold mb-4 text-gray-900">{selectedProject.title}</h3>
             <p className="text-gray-700 mb-6">{selectedProject.description}</p>
 
-            {/* Swiper dans la modale */}
-            <Swiper
-              spaceBetween={12}
-              pagination={{ clickable: true }}
-              className="mb-6"
-            >
+            <div className="flex flex-col gap-4 mb-6">
               {selectedProject.images?.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img
-                    src={img}
-                    alt={`${selectedProject.title} capture ${i + 1}`}
-                    className="rounded-xl w-full shadow-md"
-                  />
-                </SwiperSlide>
+                <img
+                  key={i}
+                  src={img}
+                  alt={`${selectedProject.title} capture ${i + 1}`}
+                  className="rounded-xl w-full shadow-md"
+                />
               ))}
-            </Swiper>
-
+            </div>
             {selectedProject.link && (
-              <a
-                href={selectedProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 transition"
-              >
-                Voir le projet en ligne
-              </a>
-            )}
+            <a
+              href={selectedProject.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 transition"
+            >
+              Voir le repo GitHub
+              <img src="../img/github-142-svgrepo-com.svg" alt="GitHub" className="w-5 h-5" />
+            </a>
+          )}
+
           </motion.div>
         </div>
       )}
