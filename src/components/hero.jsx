@@ -6,7 +6,7 @@ export default function Hero() {
       className="flex flex-col items-center justify-center h-screen text-center px-6 bg-white"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <img
         src="../img/imgProfilApple.jpeg"
