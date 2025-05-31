@@ -36,13 +36,13 @@ export default function Projects() {
       id: 4,
       title: "Planiftâches - Web",
       description: "App de planif. au CHU de Lille",
-      images: ["../img/planiftaches/accueil-planiftaches.png", "../img/planiftaches/ajout_charge-planiftaches.png"],
+      images: ["../img/planiftaches/accueil-planiftaches.png", "../img/planiftaches/ajout_charge-planiftaches.png", "../img/planiftaches/calendrier-planiftahes.png"],
       techs: ["php", "js", "html", "css", "mysql"]
     },
     {
       id: 5,
       title: "Planiftâches - Desktop",
-      description: "App admin en C# avec PDF",
+      description: "App admin en C# avec dashboards et statistiques",
       images: ["/images/planiftaches-csharp.png"],
       techs: ["csharp", "mysql"]
     }
