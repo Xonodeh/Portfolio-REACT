@@ -25,7 +25,7 @@ export default function Hero() {
       </h2>
 
       <p className="text-gray-600 max-w-xl mb-6">
-        Actuellement en fin de 2ème année de BTS SIO option SLAM, je recherche une alternance en programmation pour m'accompagner pour la suite de mon cursus et de mon avenir professionnel 🧑‍💻
+        Actuellement en fin de 2ème année de BTS SIO option SLAM, je recherche une alternance en programmation pour m'accompagner dans la suite de mon cursus et de mon avenir professionnel. 🧑‍💻
       </p>
 
       {/* Icônes sociales */}
