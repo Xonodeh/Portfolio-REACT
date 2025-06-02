@@ -107,17 +107,35 @@ export default function Projects() {
 
                   {/* Icônes technos */}
                   <div className="flex justify-center gap-3 mt-auto mb-3">
-                    {project.techs?.map((tech, idx) => (
-                      <img
-                        key={idx}
-                        src={getIcon(tech)}
-                        alt={tech}
-                        className="w-6 h-6"
-                        title={tech.toUpperCase()}
-                      />
-                    ))}
+                    {project.techs?.map((tech, idx) => {
+                      const iconSrc = getIcon(tech);
+                      const title = tech.toUpperCase();
+
+                      if (tech === "mysql") {
+                        return (
+                          <div key={idx} className="dark">
+                            <img
+                              src={iconSrc}
+                              alt={tech}
+                              className="w-6 h-6 dark:invert"
+                              title={title}
+                            />
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <img
+                          key={idx}
+                          src={iconSrc}
+                          alt={tech}
+                          className="w-6 h-6"
+                          title={title}
+                        />
+                      );
+                    })}
                   </div>
-                  
+
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -169,7 +187,6 @@ export default function Projects() {
                 <img src="../img/github-142-svgrepo-com.svg" alt="GitHub" className="w-5 h-5" />
               </a>
             )}
-
           </motion.div>
         </div>
       )}
