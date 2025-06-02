@@ -31,22 +31,24 @@ export default function Hero() {
       {/* Icônes sociales */}
       <div className="flex gap-6 mb-6">
         <a href="https://github.com/Xonodeh" target="_blank" rel="noopener noreferrer">
-          <img
-            src="../img/github-142-svgrepo-com.svg"
-            width={40}
-            height={40}
-            alt="GitHub"
-            className="hover:scale-110 transition-transform duration-300"
-          />
+        <img
+          src="../img/github-142-svgrepo-com.svg"
+          width={40}
+          height={40}
+          alt="GitHub"
+          className="hover:scale-110 transition-transform duration-300 dark:invert"
+        />
+
         </a>
         <a href="https://www.linkedin.com/in/nael-haddadi/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="../img/linkedin-svgrepo-com.svg"
-            width={40}
-            height={40}
-            alt="LinkedIn"
-            className="hover:scale-110 transition-transform duration-300"
-          />
+        <img
+          src="../img/linkedin-svgrepo-com.svg"
+          width={40}
+          height={40}
+          alt="LinkedIn"
+          className="hover:scale-110 transition-transform duration-300 dark:invert"
+        />
+
         </a>
       </div>
 

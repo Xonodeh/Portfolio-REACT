@@ -6,6 +6,9 @@ html{
   scroll-behavior: smooth;
 }
 
+.swiper-slide{
+  height : 250px!important
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   background-color: #fff;
@@ -14,3 +17,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Couleur bullets par défaut (light mode) */
+.swiper-pagination-bullet {
+  background-color: #a1a1aa; /* gris clair */
+  opacity: 0.7;
+}
+
+/* Couleur bullet active en light mode */
+.swiper-pagination-bullet-active {
+  background-color: #374151; /* gris foncé */
+  opacity: 1;
+}
+
+/* Dark mode : changer la couleur via le sélecteur 'dark' */
+.dark .swiper-pagination-bullet {
+  background-color: #6b7280; /* gris moyen */
+  opacity: 0.7;
+}
+
+.dark .swiper-pagination-bullet-active {
+  background-color: #ffffff; /* jaune/orangé vif pour contraste */
+  opacity: 1;
+}

@@ -92,6 +92,7 @@ export default function Projects() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
+            className="p-12"
           >
             {projects.map((project) => (
               <SwiperSlide key={project.id} className="overflow-visible">
@@ -116,6 +117,7 @@ export default function Projects() {
                       />
                     ))}
                   </div>
+                  
                 </motion.div>
               </SwiperSlide>
             ))}
