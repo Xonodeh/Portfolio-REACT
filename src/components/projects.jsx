@@ -1,4 +1,4 @@
- import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -69,8 +69,8 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-white text-center">
-      <h2 className="text-4xl font-semibold mb-12 text-gray-900">🖥️ Mes projets</h2>
+    <section id="projects" className="py-24 bg-white dark:bg-gray-900 text-center">
+      <h2 className="text-4xl font-semibold mb-12 text-gray-900 dark:text-gray-100">🖥️ Mes projets</h2>
 
       <div className="flex justify-center">
         <div className="w-full max-w-6xl px-4">
@@ -99,10 +99,10 @@ export default function Projects() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setSelectedProject(project)}
-                  className="cursor-pointer bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 p-5 h-full max-w-[320px] mx-auto flex flex-col justify-between"
+                  className="cursor-pointer bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md dark:shadow-black hover:shadow-xl transition-all duration-300 p-5 h-full max-w-[320px] mx-auto flex flex-col justify-between"
                 >
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{project.title}</h3>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">{project.title}</h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
 
                   {/* Icônes technos */}
                   <div className="flex justify-center gap-3 mt-auto mb-3">
@@ -116,8 +116,6 @@ export default function Projects() {
                       />
                     ))}
                   </div>
-
-                 
                 </motion.div>
               </SwiperSlide>
             ))}
@@ -133,11 +131,11 @@ export default function Projects() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl relative overflow-y-auto max-h-[90vh]"
+            className="bg-white dark:bg-gray-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl dark:shadow-black relative overflow-y-auto max-h-[90vh]"
           >
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-black text-xl transition"
+              className="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white text-xl transition"
               aria-label="Fermer la modale"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -145,8 +143,8 @@ export default function Projects() {
               </svg>
             </button>
 
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">{selectedProject.title}</h3>
-            <p className="text-gray-700 mb-6">{selectedProject.description}</p>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">{selectedProject.title}</h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">{selectedProject.description}</p>
 
             <div className="flex flex-col gap-4 mb-6">
               {selectedProject.images?.map((img, i) => (
@@ -154,21 +152,21 @@ export default function Projects() {
                   key={i}
                   src={img}
                   alt={`${selectedProject.title} capture ${i + 1}`}
-                  className="rounded-xl w-full shadow-md"
+                  className="rounded-xl w-full shadow-md dark:shadow-black"
                 />
               ))}
             </div>
             {selectedProject.link && (
-            <a
-              href={selectedProject.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 transition"
-            >
-              Voir le repo GitHub
-              <img src="../img/github-142-svgrepo-com.svg" alt="GitHub" className="w-5 h-5" />
-            </a>
-          )}
+              <a
+                href={selectedProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 transition dark:bg-blue-600 dark:hover:bg-blue-700"
+              >
+                Voir le repo GitHub
+                <img src="../img/github-142-svgrepo-com.svg" alt="GitHub" className="w-5 h-5" />
+              </a>
+            )}
 
           </motion.div>
         </div>

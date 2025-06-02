@@ -3,28 +3,28 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <motion.section
-      className="flex flex-col items-center justify-center h-screen text-center px-6 bg-white"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+  className="flex flex-col items-center justify-center min-h-screen pt-16 text-center px-6 bg-white dark:bg-gray-900"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  >
       <img
-        src="../img/imgProfilApple.jpeg"
+        src="../img/favicon.png"
         width={150}
         height={150}
         alt="Photo de profil"
-        className="rounded-full shadow-lg mb-6"
+        className="rounded-full shadow-lg mb-4"
       />
 
-      <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-gray-900">
+      <h1 className="text-5xl md:text-6xl font-extrabold mb-10 text-gray-900 dark:text-white">
         Nael Haddadi
       </h1>
 
-      <h2 className="text-lg md:text-xl max-w-xl mb-4 text-gray-700">
+      <h2 className="text-lg md:text-xl max-w-xl mb-4 text-gray-700 dark:text-gray-300">
         Développeur web & logiciel passionné par la cybersécurité. 😄
       </h2>
 
-      <p className="text-gray-600 max-w-xl mb-6">
+      <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6">
         Actuellement en fin de 2ème année de BTS SIO option SLAM, je recherche une alternance en programmation pour m'accompagner dans la suite de mon cursus et de mon avenir professionnel. 🧑‍💻
       </p>
 

@@ -8,10 +8,9 @@ import Contact from './components/contact'
 
 export default function App() {
   return (
-    <div className="font-apple bg-white text-gray-900 min-h-screen">
-
+<div className="font-apple bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-500">
       <Header />
-      <main >
+      <main>
         <Hero />
         <About />
         <Projects />
