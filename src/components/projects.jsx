@@ -113,14 +113,12 @@ export default function Projects() {
 
                       if (tech === "mysql") {
                         return (
-                          <div key={idx} className="dark">
                             <img
                               src={iconSrc}
                               alt={tech}
-                              className="w-6 h-6 dark:invert"
+                              className={tech === "mysql" ? "w-6 h-6 dark:invert transition-colors duration-300" : "w-6 h-6"}
                               title={title}
                             />
-                          </div>
                         );
                       }
 
