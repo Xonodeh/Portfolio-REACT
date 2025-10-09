@@ -116,7 +116,7 @@ export default function Projects() {
                             <img
                               src={iconSrc}
                               alt={tech}
-                              className={tech === "mysql" ? "w-6 h-6 dark:invert transition-colors duration-300" : "w-6 h-6"}
+  className={tech === "mysql" ? "w-6 h-6 dark:invert transition-colors duration-300" : "w-6 h-6"}
                               title={title}
                             />
                         );
