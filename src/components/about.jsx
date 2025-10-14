@@ -48,6 +48,13 @@ export default function About() {
       description:
         "En tant qu'assistant applicatif, j'avais pour mission les recettes de deux applications critiques du CHU, et également la gestion des incidents. Ensuite, sur la partie développeur, j'avais pour mission le développement de deux applications (web & logiciel) à destination de la DRN.",
     },
+    {
+      year: "2025",
+      title: "Ingénieur logiciel en alternance", 
+      company: "RIGA S.A.S - Roncq",
+      description:
+      "Programmation en RPG ILE sur serveur AS400, assistance réseau et cybersécurité en parallèle."
+    },
   ];
 
   return (
@@ -64,8 +71,9 @@ export default function About() {
       </h2>
 
       <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-16">
-        En fin de BTS SIO SLAM, passionné par la cybersécurité et le développement logiciel, je recherche une alternance de 3 ans pour intégrer le cycle ingénieur du numérique à <strong>Junia ISEN</strong>.
-        Je suis également admissible en <strong>3e année de Bachelor Concepteur d’Applications au CESI Lille</strong>, et en recherche d’alternance pour cette voie.
+        Diplômé d'un BTS SIO option SLAM (Développement logiciel fullstack), passionné par la cybersécurité et le développement logiciel,
+         je recherche une alternance de 3 ans pour m'accompagner durant mon cursus à <strong>Junia ISEN</strong> en tant que futur ingénieur du numérique.
+      
       </p>
       <h2 className="text-4xl font-semibold mb-10 text-gray-900 dark:text-white py-12">💼 Expériences professionnelles</h2>
 
