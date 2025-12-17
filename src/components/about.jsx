@@ -15,7 +15,8 @@ export default function About() {
       title: "Licence MIASHS - Option Sciences Cognitives",
       school: "Université de Lille",
       description:
-        "Licence Mathématiques et informatique appliqués aux sciences humaines et sociales, option sciences cognitives. J'ai arrêté cette formation pour un BTS SIO SLAM en alternance, cherchant plus de professionalisation.",
+        "Licence Mathématiques et informatique appliqués aux sciences humaines et sociales, option sciences cognitives.",
+
     },
     {
       year: "2023 - 2025",
@@ -25,11 +26,11 @@ export default function About() {
         "Développement web, applications, base de données, API REST, cybersécurité, projets en PHP, C# (Programmation orientée objet).",
     },
     {
-      year: "2025-2028",
-      title: "Cycle Ingénieur Numérique (alternance)",
-      school: "Junia ISEN, Lille (admis, attente d'une alternance)",
+      year: "2026",
+      title: "Bachelor développement fullstack & devOps en 3ème année",
+      school: "IPSSI Lille",
       description:
-        "Cycle d'ingénieur du numérique, approfondissement du développement logiciel et de la cybersécurité dans un cadre professionnalisant.",
+        "Licence en développement fullstack & devOps, en alternance.",
     },
   ];
 
@@ -49,7 +50,7 @@ export default function About() {
         "En tant qu'assistant applicatif, j'avais pour mission les recettes de deux applications critiques du CHU, et également la gestion des incidents. Ensuite, sur la partie développeur, j'avais pour mission le développement de deux applications (web & logiciel) à destination de la DRN.",
     },
     {
-      year: "2025",
+      year: "Septembre 2025 - Octobre 2025",
       title: "Ingénieur logiciel en alternance", 
       company: "RIGA S.A.S - Roncq",
       description:
@@ -71,8 +72,8 @@ export default function About() {
       </h2>
 
       <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-16">
-        Diplômé d'un BTS SIO option SLAM (Développement logiciel fullstack), passionné par la cybersécurité et le développement logiciel,
-         je recherche une alternance de 3 ans pour m'accompagner durant mon cursus à <strong>Junia ISEN</strong> en tant que futur ingénieur du numérique.
+        Diplômé d'un BTS SIO option SLAM (Développement logiciel fullstack) en étant major de promo, passionné par la cybersécurité et le développement logiciel,
+         je recherche une alternance pour m'accompagner durant mon bachelor developpement fullstack & DevOps à <strong>l'IPSSI</strong>
       
       </p>
       <h2 className="text-4xl font-semibold mb-10 text-gray-900 dark:text-white py-12">💼 Expériences professionnelles</h2>
