@@ -30,7 +30,7 @@ export default function About() {
       title: "Bachelor développement fullstack & devOps en 3ème année",
       school: "IPSSI Lille",
       description:
-        "Licence en développement fullstack & devOps, en alternance.",
+        "Développement fullstack & devOps, en alternance.",
     },
   ];
 
@@ -72,7 +72,7 @@ export default function About() {
       </h2>
 
       <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-16">
-        Diplômé d'un BTS SIO option SLAM (Développement logiciel fullstack) en étant major de promo, passionné par la cybersécurité et le développement logiciel,
+        Diplômé d'un BTS SIO option SLAM (Développement fullstack) en étant major de promo et passionné par la cybersécurité et le développement logiciel,
          je recherche une alternance pour m'accompagner durant mon bachelor developpement fullstack & DevOps à <strong>l'IPSSI</strong>
       
       </p>
