@@ -13,7 +13,7 @@ const socialLinks = [
   },
   {
     name: "LinkedIn",
-    value: "linkedin.com/in/naelhaddadi", // Remplace par ton lien
+    value: "linkedin.com/in/naelhaddadi",
     href: "https://www.linkedin.com/in/nael-haddadi/",
     icon: <Linkedin size={18} />,
     label: "Let's connect"
@@ -53,10 +53,10 @@ export const Contact = () => {
           />
         </h1>
         <FadeIn>
-        <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-          I'm currently looking for an apprenticeship starting in September 2026. Whether you have a question or just want to say hi, my inbox is always open.
-        </p>
-      </FadeIn>
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+            I'm currently looking for an apprenticeship starting in September 2026. Whether you have a question or just want to say hi, my inbox is always open.
+          </p>
+        </FadeIn>
       </motion.section>
       
 
@@ -70,15 +70,17 @@ export const Contact = () => {
               className="group flex items-center justify-between p-6 rounded-2xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02] hover:bg-black/[0.04] dark:hover:bg-white/[0.04] transition-all"
             >
               <div className="flex items-center gap-4">
-                <div className="text-gray-400 group-hover:text-blue-500 transition-colors">
+                {/* Icône avec fond stylisé Apple */}
+                <div className="text-gray-400 group-hover:text-blue-500 transition-colors p-2.5 bg-black/5 dark:bg-white/5 rounded-xl">
                   {link.icon}
                 </div>
                 <div>
-                  <p className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+                  <p className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-0.5">
                     {link.name}
                   </p>
-                  <p className="text-sm font-medium text-black dark:text-white">
-                    {link.value}
+                  {/* Mise en avant du Label comme demandé */}
+                  <p className="text-sm font-semibold text-black dark:text-white leading-tight">
+                    {link.label}
                   </p>
                 </div>
               </div>
