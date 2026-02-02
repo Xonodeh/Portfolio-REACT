@@ -1,28 +1,27 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "SF Pro Display", "SF Pro Text", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  
   --font-mono: "SF Mono", "SFMono-Regular", "ui-monospace", "Menlo", "Monaco", "Cascadia Mono", monospace;
-  --font-sans: "SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+
+  --color-background: #000000;
+  --color-card: #1c1c1e;
+  --color-muted: #8e8e93;
 }
 
-/* Configuration du Dark Mode par classe */
 @variant dark (&:where(.dark, .dark *));
-
-/* Styles de base pour le lissage du switch */
-body {
-  @apply transition-colors duration-300;
-}
-
-@theme {
-  --color-background: #0a0a0a;
-  --color-card: #111111;
-  --color-muted: #737373;
-}
 
 @layer base {
   body {
-    @apply bg-background text-white antialiased;
+    @apply bg-background text-white antialiased transition-colors duration-300;
     margin: 0;
     text-align: left;
+    
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3 {
+    @apply tracking-tight font-semibold;
   }
 }
