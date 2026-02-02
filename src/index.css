@@ -2,7 +2,6 @@
 
 @theme {
   --font-sans: "SF Pro Display", "SF Pro Text", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  
   --font-mono: "SF Mono", "SFMono-Regular", "ui-monospace", "Menlo", "Monaco", "Cascadia Mono", monospace;
 
   --color-background: #000000;
@@ -12,12 +11,19 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+html {
+  background-color: white;
+}
+
+html.dark {
+  background-color: #000000;
+}
+
 @layer base {
   body {
-    @apply bg-background text-white antialiased transition-colors duration-300;
+    @apply bg-white dark:bg-background text-black dark:text-white antialiased transition-colors duration-300 min-h-screen;
     margin: 0;
     text-align: left;
-    
     letter-spacing: -0.011em;
   }
 
