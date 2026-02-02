@@ -95,7 +95,7 @@ export const Contact = () => {
       <FadeIn delay={0.4}>
         <div className="pt-10 border-t border-black/5 dark:border-white/5">
           <p className="text-xs text-gray-500 font-mono italic">
-            Based in Lille, France. Available for remote or hybrid opportunities.
+            Based in Lille, France. Currently seeking a short-term internship as a lead-in to a apprenticeship for september 2026.
           </p>
         </div>
       </FadeIn>
