@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import indispensable
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
-  const location = useLocation(); // On utilise l'URL réelle pour l'état actif
+  const location = useLocation();
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
