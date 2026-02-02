@@ -14,7 +14,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     value: "linkedin.com/in/naelhaddadi", // Remplace par ton lien
-    href: "https://linkedin.com/in/your-profile",
+    href: "https://www.linkedin.com/in/nael-haddadi/",
     icon: <Linkedin size={18} />,
     label: "Let's connect"
   },
