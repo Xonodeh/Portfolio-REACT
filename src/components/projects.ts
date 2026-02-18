@@ -7,9 +7,9 @@ export const projects = [
   },
   {
     title: "Swift Student Challenge @Apple",
-    description: "Developed a native iOS application focused on cybersecurity awareness regarding daily AI usage.",
+    description: "Developed a native iOS application focused on cybersecurity awareness.",
     tags: ["Swift", "iOS", "Cybersecurity"],
-    link: "#" 
+    link: "https://github.com/Xonodeh/CyberPrivacy/tree/main/CyberPrivacy.swiftpm" 
   },
   {
     title: "Nexor App @Nexor",
