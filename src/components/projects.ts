@@ -6,6 +6,12 @@ export const projects = [
     link: "#"
   },
   {
+    title: "NutriAI",
+    description: "Full-stack AI assistant streamlining meal planning and logistics, from personalized AI recipes to automated Click & Collect synchronization.",
+    tags: ["Java", "SpringBoot", "Angular"],
+    link: "https://github.com/Axelvrdn/NutriChef-AI"
+  },
+  {
     title: "Swift Student Challenge @Apple",
     description: "Developed a native iOS application focused on cybersecurity awareness.",
     tags: ["Swift", "iOS", "Cybersecurity"],

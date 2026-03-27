@@ -107,45 +107,41 @@ export const Education = () => {
       </FadeIn>
 
       {/* Journey Timeline */}
-      <FadeIn>
-        <div className="mt-32">
-          <h2 className="text-xs font-mono text-gray-500 uppercase tracking-[0.2em] mb-12">
-            Timeline
-          </h2>
-          
-          <div className="relative border-l border-black/5 dark:border-white/10 ml-3 space-y-12">
-            {/* CESI Master */}
-            <div className="relative pl-8">
-              <div className="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.4)]" />
-              <div className="flex justify-between items-start mb-1">
-                <h3 className="text-sm font-bold text-black dark:text-white">CESI, école d'ingénieurs</h3>
-                <span className="text-[10px] font-mono text-gray-400">2027 — 2029</span>
-              </div>
-              <p className="text-xs text-gray-500 font-medium italic">Master's Degree in Cybersecurity</p>
-            </div>
-
-            {/* CESI Bachelor */}
-            <div className="relative pl-8">
-              <div className="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-yellow-500/80" />
-              <div className="flex justify-between items-start mb-1">
-                <h3 className="text-sm font-bold text-black dark:text-white">CESI, école d'ingénieurs</h3>
-                <span className="text-[10px] font-mono text-gray-400">2026 — 2027</span>
-              </div>
-              <p className="text-xs text-gray-500 font-medium italic">3rd year of Bachelor's Degree — Fullstack Development & DevOps</p>
-            </div>
-
-            {/* BTS SIO */}
-            <div className="relative pl-8">
-              <div className="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-emerald-500/80" />
-              <div className="flex justify-between items-start mb-1">
-                <h3 className="text-sm font-bold text-black dark:text-white">Gaston Berger, Lille</h3>
-                <span className="text-[10px] font-mono text-gray-400">2023 — 2025</span>
-              </div>
-              <p className="text-xs text-gray-500 font-medium italic">BTS SIO (SLAM) - Graduate Valedictorian</p>
-            </div>
-          </div>
+<FadeIn>
+  <div className="mt-32">
+    <h2 className="text-xs font-mono text-gray-500 uppercase tracking-[0.2em] mb-12">
+      Timeline
+    </h2>
+    
+    <div className="relative border-l border-black/5 dark:border-white/10 ml-3 space-y-12">
+      {/* Education - Engineering Cycle / Bachelor */}
+      <div className="relative pl-8">
+        <div className="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.4)]" />
+        <div className="flex justify-between items-start mb-1">
+          <h3 className="text-sm font-bold text-black dark:text-white">IMT Nord Europe or CESI</h3>
+          <span className="text-[10px] font-mono text-gray-400">2026 — Present</span>
         </div>
-      </FadeIn>
+        <p className="text-xs text-gray-500 font-medium italic">Engineering Cycle or Bachelor's Degree — Fullstack Development & DevOps</p>
+      </div>
+
+      {/* BTS SIO */}
+    <div className="relative pl-8">
+      <div className="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-emerald-500/80" />
+      <div className="flex justify-between items-start mb-1">
+        <h3 className="text-sm font-bold text-black dark:text-white">Gaston Berger, Lille</h3>
+        <span className="text-[10px] font-mono text-gray-400">2023 — 2025</span>
+      </div>
+      <p className="text-xs text-gray-500 font-medium italic mb-2">
+        Associate's Degree in Software Development (BTS SIO SLAM) — Graduate Valedictorian
+      </p>
+      <p className="text-[11px] text-gray-400 leading-relaxed max-w-lg">
+        Specialized in Fullstack development and Database administration. Mastered OOP principles, 
+        software design patterns, and secure application development through 2 years of apprenticeship in Lille's Hospital IT Team.
+      </p>
+</div>
+    </div>
+  </div>
+</FadeIn>
 
       {/* Tech Stack Section */}
       <FadeIn>
