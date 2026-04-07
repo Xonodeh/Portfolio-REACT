@@ -153,11 +153,15 @@ export const Education = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-4">
             {/* Front-End */}
             <div>
+              
               <div className="flex items-center gap-2 mb-4">
                 <Code2 size={14} className="text-gray-400" />
                 <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">Front-End</p>
               </div>
               <ul className="space-y-2">
+                <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-indigo-500" /> Angular
+                </li>
                 <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
                   <span className="w-1 h-1 rounded-full bg-blue-500" /> React
                 </li>
@@ -167,6 +171,7 @@ export const Education = () => {
                 <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
                   <span className="w-1 h-1 rounded-full bg-indigo-500" /> Tailwind CSS
                 </li>
+                
               </ul>
             </div>
 
@@ -178,13 +183,16 @@ export const Education = () => {
               </div>
               <ul className="space-y-2">
                 <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-purple-500" /> Java & SpringBoot
+                </li>
+                <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
                   <span className="w-1 h-1 rounded-full bg-purple-500" /> C# .NET
                 </li>
                 <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
                   <span className="w-1 h-1 rounded-full bg-blue-600" /> PHP
                 </li>
                 <li className="text-sm font-medium text-black dark:text-white flex items-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-orange-500" /> MySQL / Firebase
+                  <span className="w-1 h-1 rounded-full bg-orange-500" /> MySQL / Firebase / PostgreSQL
                 </li>
               </ul>
             </div>

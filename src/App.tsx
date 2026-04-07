@@ -20,11 +20,11 @@ const About = () => {
         <h1 className="text-4xl font-bold tracking-tight mb-4">
           <TypeAnimation
             sequence={[
-              "hello,  Nael here",
+              "hello,  Nael here. :)",
               1500, 
               "",   
               500,  
-              "hello,  Nael here",
+              "hello,  Nael here. :)",
               1500,
             ]}
             wrapper="span" 
@@ -43,7 +43,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
         {[
           { label: "Location", value: "Lille, France" },
-          { label: "Education", value: "Fullstack Dev. @CESI" },
+          { label: "Education", value: "Fullstack Dev & DevOps" },
           { label: "Availability", value: "Sept. 2026", special: true }
         ].map((item, i) => (
           <div key={i} className="p-4 rounded-2xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-sm text-left">
