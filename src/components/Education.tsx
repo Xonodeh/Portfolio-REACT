@@ -118,10 +118,10 @@ export const Education = () => {
       <div className="relative pl-8">
         <div className="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.4)]" />
         <div className="flex justify-between items-start mb-1">
-          <h3 className="text-sm font-bold text-black dark:text-white">IMT Nord Europe or CESI</h3>
-          <span className="text-[10px] font-mono text-gray-400">2026 — Present</span>
+          <h3 className="text-sm font-bold text-black dark:text-white">IMT Nord Europe</h3>
+          <span className="text-[10px] font-mono text-gray-400">2026 — 2029</span>
         </div>
-        <p className="text-xs text-gray-500 font-medium italic">Engineering Cycle or Bachelor's Degree — Fullstack Development & DevOps</p>
+        <p className="text-xs text-gray-500 font-medium italic">Engineering Cycle - Fullstack Development & DevOps</p>
       </div>
 
       {/* BTS SIO */}

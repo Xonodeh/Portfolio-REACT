@@ -9,9 +9,6 @@ export const Footer = () => {
         {/* Info & Status */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <p className="text-sm font-medium text-white">Nael Haddadi.</p>
-          <p className="text-xs text-gray-500">
-            Available for an apprenticeship in Sept 2026.
-          </p>
         </div>
 
         {/* Social Links */}
