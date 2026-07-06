@@ -12,6 +12,47 @@ export const Education = () => {
           </h2>
           
           <div className="space-y-12">
+          {/* CAPGEMINI Apprenticeship */}
+            {/* CAPGEMINI Apprenticeship */}
+            <div className="group">
+              <div className="flex justify-between items-baseline mb-2">
+                <a 
+                  href="https://nexor-app.fr/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm font-bold text-black dark:text-white group-hover:text-blue-500 transition-colors"
+                >
+                  Software Engineer Apprenticeship - Capgemini Lille
+                </a>
+                <span className="text-[10px] font-mono text-gray-400">September 2026 — Present</span>
+              </div>
+              <p className="text-xs text-gray-500 font-medium mb-4 italic">
+                Apprentice Software Engineer
+              </p>
+              <ul className="space-y-3">
+                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
+                  Full-stack development using C# .NET
+                </li>
+                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
+                  Active involvement in Agile (Scrum) workflows, contributing to daily rituals, code reviews, and cross-functional team collaborations.
+                </li>
+                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
+                  Commitment to software quality through Clean Code principles, rigorous unit testing, and continuous refactoring.
+                </li>
+                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
+                  DevOps implementation, contributing to the configuration, optimization, and automation of CI/CD deployment pipelines.
+                </li>
+                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
+                  Technical design and solution architecture, progressing toward end-to-end ownership of features and strategic technical stack choices.
+                </li>
+                
+              </ul>
+            </div>
             
             {/* Nexor - Volunteering */}
             <div className="group">
@@ -24,7 +65,7 @@ export const Education = () => {
                 >
                   Nexor App
                 </a>
-                <span className="text-[10px] font-mono text-gray-400">2025 — Present</span>
+                <span className="text-[10px] font-mono text-gray-400">January 2026 — June 2026</span>
               </div>
               <p className="text-xs text-gray-500 font-medium mb-4 italic">
                 Volunteer Software Developer
@@ -36,30 +77,6 @@ export const Education = () => {
                 </li>
               </ul>
             </div>
-
-            {/* RIGA - Apprenticeship */}
-            <div className="group">
-              <div className="flex justify-between items-baseline mb-2">
-                <h3 className="text-sm font-bold text-black dark:text-white group-hover:text-blue-500 transition-colors">
-                  RIGA
-                </h3>
-                <span className="text-[10px] font-mono text-gray-400">Sept. 2025 — Oct. 2025</span>
-              </div>
-              <p className="text-xs text-gray-500 font-medium mb-4 italic">
-                Software Engineer Apprentice 
-              </p>
-              <ul className="space-y-3">
-                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
-                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
-                  Software development and using IBM AS400 (RPG ILE 4).
-                </li>
-                <li className="text-[11px] text-gray-400 flex items-start gap-3 leading-relaxed">
-                  <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/50 shrink-0" />
-                  Cybersecurity assistance, focusing on network monitoring and system integrity.
-                </li>
-              </ul>
-            </div>
-
             {/* CHU de Lille */}
             <div className="group">
               <div className="flex justify-between items-baseline mb-2">
