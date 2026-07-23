@@ -35,7 +35,7 @@ const About = () => {
           />
         </h1>
         <p className="text-gray-600 dark:text-gray-400 text-lg">
-          your average CS student struggling with an infinite amount of unfinished projects and the quest for the perfect apprenticeship.
+          your average CS student struggling with an infinite amount of unfinished projects.
         </p>
       </motion.section>
 
@@ -43,8 +43,8 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
         {[
           { label: "Location", value: "Lille, France" },
-          { label: "Education", value: "Fullstack Dev & DevOps" },
-          { label: "Availability", value: "Sept. 2026", special: true }
+          { label: "Education", value: "Engineering Student - IMT Nord Europe", special: true },
+          { label: "Currently", value: "Software Engineer Apprentice - @Capgemini", special: true }
         ].map((item, i) => (
           <div key={i} className="p-4 rounded-2xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-sm text-left">
             <p className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-1">{item.label}</p>
